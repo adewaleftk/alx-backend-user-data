@@ -2,6 +2,7 @@
 """Authentication module for the API.
 """
 import re
+import os
 from typing import List, TypeVar
 from flask import request
 
@@ -37,7 +38,7 @@ class Auth:
         """
         return None
 
-    def session_cookie(self, request=None) -> str:
+   def session_cookie(self, request=None) -> str:
         """Gets the value of the cookie named SESSION_NAME.
         """
         if request is not None:
